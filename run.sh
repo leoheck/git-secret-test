@@ -3,7 +3,7 @@
 repo_name="git-secret-test"
 repo_path="${repo}"
 
-if [[ ! -d "${repo_path}" ]]: then
+if [[ ! -d "${repo_path}" ]]; then
 	git clone https://github.com/leoheck/${repo_name}.git "${repo_path}"
 	cd "${repo_path}"
 else
