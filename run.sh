@@ -14,6 +14,8 @@ else
 	git pull -q
 fi
 
+sleep 1
+
 # Run the test..
 ./test.sh
 rm -rf ${REPO_PATH}

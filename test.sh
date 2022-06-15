@@ -13,7 +13,7 @@ if [[ ! -f ${SECRET_FILE} ]];
 then
 	# This command will ask a password to revel the secret file
 	# If it exists it was already decrypted
-	# git secret reveal
+	git secret reveal
 fi
 echo "Content fo the secret file: $(cat ${SECRET_FILE})"
 
