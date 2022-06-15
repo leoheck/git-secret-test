@@ -17,7 +17,6 @@ then
 fi
 echo "Content fo the secret file: $(cat ${SECRET_FILE})"
 
-
 # The following command get the content without creating a file
 # Does not work on certain versions..
 # MY_SECRET=$(git secret cat ${SECRET_FILE})

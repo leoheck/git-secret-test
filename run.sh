@@ -1,19 +1,23 @@
 #!/bin/bash
 
-repo_name="git-secret-test"
-repo_path="/tmp/${repo_name}"
+REPO_NAME="git-secret-test"
+REPO_PATH="/tmp/${REPO_NAME}"
 
-if [ ! -d "${repo_path}" ]; then
-	echo "Cloning ${repo_path} repo ..."
-	git clone -q https://github.com/leoheck/${repo_name}.git "${repo_path}"
+if [ ! -d "${REPO_PATH}" ]; then
+	echo "Cloning ${REPO_PATH} repo ..."
+	git clone -q https://github.com/leoheck/${REPO_NAME}.git "${REPO_PATH}"
 	cd "${repo_paqth}"
 else
-	echo "Updating existing ${repo_path} repo ..."
-	cd "${repo_path}"
+	echo "Updating existing ${REPO_PATH} repo ..."
+	cd "${REPO_PATH}"
 	git stash -q
 	git pull -q
 fi
 
 # Run the test..
 ./test.sh
-rm -rf ${repo_path}
+rm -rf ${REPO_PATH}
+
+# Remove secret
+SECRET_FILE="hide.me"
+rm -rf ${REPO_PATH}/${SECRET_FILE}
