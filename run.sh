@@ -16,3 +16,4 @@ fi
 
 # Run the test..
 ./test.sh
+rm -rf ${repo_path}
