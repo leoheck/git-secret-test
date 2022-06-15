@@ -1,7 +1,7 @@
 #!/bin/bash
 
 repo_name="git-secret-test"
-repo_path="${repo}"
+repo_path="/tmp/${repo_name}"
 
 if [[ ! -d "${repo_path}" ]]; then
 	git clone https://github.com/leoheck/${repo_name}.git "${repo_path}"
